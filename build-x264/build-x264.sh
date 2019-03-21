@@ -52,7 +52,7 @@ then
 		    if [ "$ARCH" = "x86_64" ]
 		    then
 		    	CFLAGS="$CFLAGS -mios-simulator-version-min=7.0"
-		    	HOST=
+		    	HOST="--host=x86_64-apple-darwin"
 		    else
 		    	CFLAGS="$CFLAGS -mios-simulator-version-min=7.0"
 			    HOST="--host=i386-apple-darwin"
@@ -67,7 +67,7 @@ then
 		        HOST="--host=arm-apple-darwin"
 			    XARCH="-arch arm"
 		    fi
-            CFLAGS="$CFLAGS -mios-version-min=7.0"
+            CFLAGS="$CFLAGS -mios-version-min=7.0 -fembed-bitcode"
             ASFLAGS="$CFLAGS"
 		fi
 

@@ -59,10 +59,10 @@ then
 		    if [ "$ARCH" = "arm64" ]
 		    then
 #		        CFLAGS="$CFLAGS -D__arm__ -D__ARM_ARCH_7EM__" # hack!
-                CFLAGS="$CFLAGS -mios-version-min=7.0"
+                CFLAGS="$CFLAGS -mios-version-min=7.0 -fembed-bitcode"
 		        HOST="--host=aarch64-apple-darwin"
             else
-                CFLAGS="$CFLAGS -mios-version-min=7.0"
+                CFLAGS="$CFLAGS -mios-version-min=7.0 -fembed-bitcode"
 		        HOST="--host=arm-apple-darwin"
             fi
 		    SIMULATOR=

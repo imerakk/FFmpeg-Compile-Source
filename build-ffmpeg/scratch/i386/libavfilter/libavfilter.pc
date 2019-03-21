@@ -1,0 +1,14 @@
+prefix=/Users/liuchunxi/Desktop/FFmpeg-Compile-Source/build-ffmpeg/thin/i386
+exec_prefix=${prefix}
+libdir=/Users/liuchunxi/Desktop/FFmpeg-Compile-Source/build-ffmpeg/thin/i386/lib
+includedir=/Users/liuchunxi/Desktop/FFmpeg-Compile-Source/build-ffmpeg/thin/i386/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 7.40.101
+Requires: libswresample >= 3.3.100, libavutil >= 56.22.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavfilter -pthread -lm
+Libs.private: 
+Cflags: -I${includedir}
